@@ -1,4 +1,4 @@
-**G = 1234** *(valeur par défaut — à remplacer : renseigner `NUMEROS_INSCRIPTION` dans `config.py`, G = somme mod 10 000)*
+**G = 7952 dans `config.py`, G = somme mod 10 000)*
 
 # Médina 2.0 — moteur algorithmique (1CINFO1, Algorithm Engineering & Problem Solving)
 
