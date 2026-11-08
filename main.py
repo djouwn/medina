@@ -47,12 +47,15 @@ def journee():
     r = backtracking(csp, mrv=True, fc=True)
     print("  affectation :", {k: v for k, v in sorted(r['solution'].items(), key=lambda kv: kv[1])})
 
-    print("\n17 h : la pause au café (IA contre IA, démonstration)")
-    ia = lambda e: coup_ia(e, 3, eval_2)
-    fin = jouer_partie(ia, ia)
+    print("\n17 h : la pause au café (IA contre IA)")
+
+    ia1 = lambda e: coup_ia(e, 3, eval_2)
+    ia2 = lambda e: coup_ia(e, 5, eval_2)
+
+    fin = jouer_partie(ia1, ia2)
+
     print(fin)
-    print("  gagnant :", fin.gagnant() or "nul")
-    print("\nPour jouer contre l'IA : python main.py jouer")
+    print("Gagnant :", fin.gagnant() or "nul")
 
 
 if __name__ == "__main__":

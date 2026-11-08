@@ -1,6 +1,6 @@
 """Configuration commune du projet Médina 2.0."""
 
-NUMEROS_INSCRIPTION = []
+NUMEROS_INSCRIPTION = [14516902,11152162]
 
 G = sum(NUMEROS_INSCRIPTION) % 10000 if NUMEROS_INSCRIPTION else 1234
 
