@@ -40,15 +40,15 @@ Graine G = 7952  ·  k = 99
 
 | Méthode | Nombre de pas | Coût | Cases explorées | Optimal en coût ? | Temps (ms) |
 |---|---|---|---|---|---|
-| BFS | 24 | 29 | 234 | non | 0.67 |
-| DFS | 172 | 202 | 386 | non | 0.92 |
-| Coût uniforme | 24 | 27 | 230 | oui | 0.64 |
-| Glouton (Manhattan) | 24 | 29 | 42 | non | 0.13 |
-| A* (h nulle) | 24 | 27 | 230 | oui | 0.62 |
-| A* (Tchebychev) | 24 | 27 | 161 | oui | 0.48 |
-| A* (Euclide) | 24 | 27 | 147 | oui | 0.49 |
-| A* (Manhattan) | 24 | 27 | 112 | oui | 0.48 |
-| A* pondéré (Manhattan, w=2) | 24 | 28 | 37 | non | 0.16 |
+| BFS | 24 | 29 | 234 | non | 0.57 |
+| DFS | 172 | 202 | 386 | non | 0.83 |
+| Coût uniforme | 24 | 27 | 230 | oui | 0.59 |
+| Glouton (Manhattan) | 24 | 29 | 42 | non | 0.12 |
+| A* (h nulle) | 24 | 27 | 230 | oui | 0.58 |
+| A* (Tchebychev) | 24 | 27 | 161 | oui | 0.46 |
+| A* (Euclide) | 24 | 27 | 147 | oui | 0.43 |
+| A* (Manhattan) | 24 | 27 | 112 | oui | 0.32 |
+| A* pondéré (Manhattan, w=2) | 24 | 28 | 37 | non | 0.11 |
 
 ![trajet](figures/trajet_0_1.png)
 
@@ -56,21 +56,21 @@ Graine G = 7952  ·  k = 99
 
 | Méthode | Nombre de pas | Coût | Cases explorées | Optimal en coût ? | Temps (ms) |
 |---|---|---|---|---|---|
-| BFS | 32 | 34 | 519 | oui | 1.32 |
+| BFS | 32 | 34 | 519 | oui | 1.36 |
 | DFS | 170 | 190 | 217 | non | 0.51 |
-| Coût uniforme | 32 | 34 | 472 | oui | 1.32 |
+| Coût uniforme | 32 | 34 | 472 | oui | 1.30 |
 | Glouton (Manhattan) | 32 | 34 | 45 | oui | 0.13 |
-| A* (h nulle) | 32 | 34 | 472 | oui | 1.35 |
+| A* (h nulle) | 32 | 34 | 472 | oui | 1.34 |
 | A* (Tchebychev) | 32 | 34 | 246 | oui | 0.73 |
-| A* (Euclide) | 32 | 34 | 209 | oui | 0.65 |
-| A* (Manhattan) | 32 | 34 | 157 | oui | 0.57 |
-| A* pondéré (Manhattan, w=2) | 32 | 34 | 56 | oui | 0.18 |
+| A* (Euclide) | 32 | 34 | 209 | oui | 0.67 |
+| A* (Manhattan) | 32 | 34 | 157 | oui | 0.48 |
+| A* pondéré (Manhattan, w=2) | 32 | 34 | 56 | oui | 0.17 |
 
 ![trajet](figures/trajet_9_11.png)
 
 ## Partie 3 — Le circuit du guide
 
-### Q12 — Matrice des coûts (132 appels à A*, 54 ms)
+### Q12 — Matrice des coûts (132 appels à A*, 41 ms)
 
 ```
   0  27  29  38  20  21  35  41  55  36  29  38
@@ -92,7 +92,7 @@ Paires (i,j) asymétriques : 27/66. Relation vérifiée `M[i][j] − M[j][i] = c
 ### Q13-Q14 — Référence
 
 - Plus proche voisin : [0, 4, 5, 1, 3, 7, 9, 10, 2, 6, 11, 8], coût 223
-- Held-Karp : coût **176**, tournée [0, 5, 11, 6, 3, 8, 7, 9, 10, 2, 4, 1], 11264 états, 44 ms
+- Held-Karp : coût **176**, tournée [0, 5, 11, 6, 3, 8, 7, 9, 10, 2, 4, 1], 11264 états, 39 ms
 
 ### Q15 — Descente 2-opt depuis 10 tournées aléatoires
 
@@ -126,10 +126,10 @@ Coûts atteints : [176, 176, 176, 176, 176, 176, 176, 176, 178, 176] (optimum 17
 | Méthode | Écart moyen (%) | Meilleur écart (%) | Pire écart (%) | Temps moyen (ms) |
 |---|---|---|---|---|
 | Plus proche voisin | 26.70 | 26.70 | 26.70 | 0.0 |
-| Descente 2-opt (départ aléatoire) | 0.00 | 0.00 | 0.00 | 0.8 |
-| Recuit simulé (échange, α=0.995) | 0.00 | 0.00 | 0.00 | 395.7 |
-| Algorithme génétique (p_mut=0.1) | 1.19 | 0.00 | 5.11 | 252.0 |
-| Held-Karp | 0.00 | 0.00 | 0.00 | 35.2 |
+| Descente 2-opt (départ aléatoire) | 0.00 | 0.00 | 0.00 | 1.5 |
+| Recuit simulé (échange, α=0.995) | 0.00 | 0.00 | 0.00 | 332.9 |
+| Algorithme génétique (p_mut=0.1) | 1.19 | 0.00 | 5.11 | 211.2 |
+| Held-Karp | 0.00 | 0.00 | 0.00 | 31.1 |
 
 ## Partie 4 — Le souk réaménagé
 
@@ -141,11 +141,11 @@ Coûts atteints : [176, 176, 176, 176, 176, 176, 176, 176, 178, 176] (optimum 17
 
 | Variante | Nœuds (1re sol.) | Retours (1re sol.) | Temps (ms) | Nœuds (toutes) | Retours (toutes) |
 |---|---|---|---|---|---|
-| Backtracking simple | 10 | 1 | 0.21 | 260 | 93 |
-| + MRV et degré | 9 | 0 | 0.84 | 344 | 111 |
-| + forward checking | 9 | 1 | 0.23 | 187 | 93 |
-| + MRV, degré et forward checking | 9 | 0 | 0.70 | 265 | 111 |
-| AC-3 puis MRV, degré et forward checking | 9 | 0 | 0.65 | 265 | 110 |
+| Backtracking simple | 10 | 1 | 0.19 | 260 | 93 |
+| + MRV et degré | 9 | 0 | 0.83 | 344 | 111 |
+| + forward checking | 9 | 1 | 0.22 | 187 | 93 |
+| + MRV, degré et forward checking | 9 | 0 | 0.66 | 265 | 111 |
+| AC-3 puis MRV, degré et forward checking | 9 | 0 | 0.64 | 265 | 110 |
 
 Première solution : {'PA': 1, 'PB': 3, 'CH': 2, 'DI': 7, 'BI': 5, 'TI': 4, 'LI': 8, 'PT': 9}
 
@@ -186,13 +186,13 @@ Position de milieu de partie (8 demi-coups aléatoires, graine G) :
 |---|---|---|---|---|
 | 1 | 5 | 5 | 5 | 0.1 |
 | 2 | 49 | 18 | 18 | 0.2 |
-| 3 | 336 | 121 | 93 | 1.8 |
-| 4 | 2770 | 303 | 195 | 3.8 |
-| 5 | 20272 | 1367 | 719 | 15.9 |
+| 3 | 336 | 121 | 93 | 1.5 |
+| 4 | 2770 | 303 | 195 | 3.1 |
+| 5 | 20272 | 1367 | 719 | 13.3 |
 
 Vérification : alpha-bêta = Minimax (profondeur 3, eval_1 et eval_2) sur 20/20 positions.
 
-### Q28 — Tournoi eval_1 vs eval_2 (10 parties, profondeur 3, 9 s)
+### Q28 — Tournoi eval_1 vs eval_2 (10 parties, profondeur 3, 8 s)
 
 Score : **eval_1 = 5.0**, **eval_2 = 5.0**
 
